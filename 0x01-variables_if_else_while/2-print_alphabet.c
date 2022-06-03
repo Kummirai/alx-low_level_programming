@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <time.h>
-#include <stdlib.h>
 
 /**
  * main - Prints alphabet to lowercase
@@ -9,7 +7,7 @@
  */
 int main(void)
 {
-	int ch;
+	char ch;
 
 	for (ch = 'a' ; ch <= 'z'; ch++);
 

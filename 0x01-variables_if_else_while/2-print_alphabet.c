@@ -1,19 +1,17 @@
 #include <stdio.h>
 
 /**
- * main - Prints alphabet to lowercase
- *
- * Return: 0 (Success)
+ * main - This program prints the alphabet in lowercase
+ * and uses the control loop for, and the function putchar
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
 	char ch;
 
-	for (ch = 'a' ; ch <= 'z'; ch++);
-
-	putchar(ch);
+	for (ch = 'a'; ch <= 'z'; ch++)
+		putchar(ch);
 
 	putchar('\n');
-
 	return (0);
 }

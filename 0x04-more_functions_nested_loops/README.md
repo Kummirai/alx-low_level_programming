@@ -14,6 +14,10 @@ Returns 1 if c is a digit
 Returns 0 otherwise
 FYI: The standard library provides a similar function: isdigit. Run man isdigit to learn more
 
+2-mul.c
+Write a function that multiplies two integers.
+Prototype: int mul(int a, int b);
+
 3-print_numbers.c
 Write a function that prints the numbers, from 0 to 9, followed by a new line.
 

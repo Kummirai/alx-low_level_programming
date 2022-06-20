@@ -43,6 +43,11 @@ The _strstr() function finds the first occurrence of the substring needle in the
 Returns a pointer to the beginning of the located substring, or NULL if the substring is not found.
 FYI: The standard library provides a similar function: strstr. Run man strstr to learn more
 
+7-print_chessboard.c
+Write a function that prints the chessboard.
+
+Prototype: void print_chessboard(char (*a)[8]);
+
 
 
 

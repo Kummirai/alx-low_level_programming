@@ -4,7 +4,7 @@
 /**
  * _strchr - string to be evaluated
  * @c: charcater to be located
- * Return: poimnter to first occurence or null if the character is not found
+ * Return: pointer to first occurence or null if the character is not found
  */
 char *_strchr(char *s, char c)
 {

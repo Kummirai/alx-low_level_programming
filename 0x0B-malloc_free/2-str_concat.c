@@ -26,7 +26,7 @@ char *str_concat(char *s1, char *s2)
 	{
 	return (NULL);
 	}
-	for (k = 0; s1[k] != '\0'; k++)
+	for (k = 0; k < i; k++)
 		a[k] = s1[k];
 	max = j;
 	for (j = 0; j <= max ; j++, k++)

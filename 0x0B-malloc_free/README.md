@@ -14,3 +14,23 @@ The _strdup() function returns a pointer to a new string which is a duplicate of
 Returns NULL if str = NULL
 On success, the _strdup function returns a pointer to the duplicated string. It returns NULL if insufficient memory was available
 FYI: The standard library provides a similar function: strdup. Run man strdup to learn more.
+
+2-str_concat.c
+Write a function that concatenates two strings.
+
+Prototype: char *str_concat(char *s1, char *s2);
+The returned pointer should point to a newly allocated space in memory which contains the contents of s1, followed by the contents of s2, and null terminated
+if NULL is passed, treat it as an empty string
+The function should return NULL on failure
+
+3-alloc_grid.c
+Write a function that frees a 2 dimensional grid previously created by your alloc_grid function.
+
+Prototype: void free_grid(int **grid, int height);
+Note that we will compile with your alloc_grid.c file. Make sure it compiles.
+
+4-free_grid.c
+Write a function that frees a 2 dimensional grid previously created by your alloc_grid function.
+
+Prototype: void free_grid(int **grid, int height);
+Note that we will compile with your alloc_grid.c file. Make sure it 

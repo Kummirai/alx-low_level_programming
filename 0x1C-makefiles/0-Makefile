@@ -1,4 +1,2 @@
-CC=gcc
-CFLAGS=-I
-school:school.c main.c
+All:
 	gcc -o school main.c school.c -I

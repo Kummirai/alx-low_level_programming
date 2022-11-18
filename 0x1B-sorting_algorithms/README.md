@@ -1,3 +1,1 @@
-<!DOCTYPE html>
-<html>
-<h1>Sorting Algorithms</h1>
+# 0x1B. C - Sorting algorithms & Big O

@@ -1,48 +1,50 @@
 #include "sort.h"
 
 /**
- * insertion_sort_list - Sorts a doubly linked list of integers in
- * ascending order using the Insertion sort algorithm
- * @list: double pointer to the doubly linked list
- */
+ * insertion_sort_list - sorts a doubly linked list of integers,
+ * in ascending order using the Insertion sort algorithm
+ * @list: the list
+**/
+
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *p = NULL, *current = NULL;
+	listint_t *node, *temp, *next, *temp_next, *temp_prev;
+	int i = 0;
 
-	/* check if elements in list are greater than two */
-	if (list == NULL || (*list) == NULL || (*list)->next == NULL)
+	if (list == NULL || (*list)->next == NULL)
 		return;
-
-	/* set p and current variables to second node */
-	p = current = (*list)->next;
-
-	/* while second node is not null */
-	while (current)
+	node = *list;
+	node = node->next;
+	while (node != NULL)
 	{
-		/* set current to third node */
-		current = current->next;
+		temp = node;
+		next = node->next;
+		temp_next = temp->next;
+		temp_prev = temp->prev;
 
-
-		/* while first node && 2nd < 1st */
-		while (p->prev && p->n < p->prev->n)
+		while (temp->prev != NULL && temp_prev->n > temp->n)
 		{
-			/* 1st node now points to 3rd node */
-			p->prev->next = p->next;
-			/* if 3rd node is not null */
-			if (p->next != NULL)
+			if (temp_next != NULL)
+				temp_next->prev = temp_prev;
+			temp_prev->next = temp_next;
+			if (temp_prev->prev == NULL)
 			{
-				/* 3rd node points to 1st node */
-				p->next->prev = p->prev;
+				temp_prev->prev = temp;
+				*list = temp;
+				temp->prev = NULL;
 			}
-			p->next = p->prev;
-			p->prev = p->next->prev;
-			if (p->prev)
-				p->prev->next = p;
 			else
-				*list = p;
-			p->next->prev = p;
+			{
+				temp->prev = temp_prev->prev;
+				temp_prev->prev->next = temp;
+				temp_prev->prev = temp;
+			}
+			temp->next = temp_prev;
+			temp_prev = temp->prev;
+			temp_next = temp->next;
 			print_list(*list);
 		}
-		p = current;
+		node = next;
+		i++;
 	}
 }

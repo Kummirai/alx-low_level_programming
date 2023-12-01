@@ -1,7 +1,6 @@
 Toggle navigation
 You have a captain's log due before 2023-12-03 (in 1 day)! Log it now!
-0x15. C - File I/O
-C
+<h1>0x15. C - File I/O</h1>
 Syscall
  By: Julien Barbier
  Weight: 1
